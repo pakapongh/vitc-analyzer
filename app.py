@@ -51,14 +51,14 @@ def index():
 
                     if blue_intensity <= 145.98:
                         intensity_info = "น้อยที่สุด (0.00 - 0.20)"
-                    elif blue_intensity <= 147.51:
+                    elif 145.99 <= blue_intensity <= 147.51:
                         intensity_info = "น้อย (0.21 - 0.78)"
-                    elif blue_intensity <= 165.20:
+                    elif 147.52 <= blue_intensity <= 165.20:
                         intensity_info = "ปานกลาง (0.79 - 3.12)"
-                    elif blue_intensity <= 169.43:
+                    elif 165.21 <= blue_intensity <= 169.43:
                         intensity_info = "มาก (3.13 - 12.50)"
                     else:
-                        intensity_info = "มากที่สุด (12.6 - 50.00)"
+                        intensity_info = "ค่อนข้างมาก (12.60 - 50.00)"
 
                     result = (f"ความเข้มข้นของวิตามินซี: {intensity_info} mg/ml (B={blue_intensity:.2f})")
             else:
