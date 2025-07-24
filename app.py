@@ -49,16 +49,24 @@ def index():
                     blue_channel = roi[:, :, 2]
                     blue_intensity = np.mean(blue_channel)
 
-                    if blue_intensity <= 166.91:
-                        intensity_info = "น้อยมาก (0 - 0.039)"
-                    elif 166.92 <= blue_intensity <= 183.25:
-                        intensity_info = "น้อย (0.78 - 1.56)"
-                    elif 183.26 <= blue_intensity <= 187.58:
-                        intensity_info = "ปานกลาง (1.57 - 3.125)"
-                    elif 187.59 <= blue_intensity <= 194.08:
-                        intensity_info = "สูง (3.126 - 6.25)"
+                    if blue_intensity <= 51.00:
+                        intensity_info = "ไม่พบวิตามินซี"
+                    elif 50.99 <= blue_intensity <= 72.00:
+                        intensity_info = "น้อยที่สุด (0.156 - 0.234)"
+                    elif 71.99 <= blue_intensity <= 120.00:
+                        intensity_info = "น้อยมาก (0.319 - 0.468)"
+                    elif 119.99 <= blue_intensity <= 134.00:
+                        intensity_info = "ค่อนข้างน้อย (0.624 - 0.936)"
+                    elif 133.99 <= blue_intensity <= 140.00:
+                        intensity_info = "น้อย (1.250 - 1.875)"
+                    elif 139.99 <= blue_intensity <= 147.00:
+                        intensity_info = "ปานกลาง (2.50 - 3.75)"
+                    elif 146.99 <= blue_intensity <= 160.00:
+                        intensity_info = "มาก (5.0 - 7.5)"
+                    elif 159.99 <= blue_intensity <= 170.00:
+                        intensity_info = "ค่อนข้างมาก (10 - 15)"
                     else:
-                        intensity_info = "สูงมาก (6.26 - 50)"
+                        intensity_info = "มากที่สุด (16 - 24)"
 
                     result = f"ความเข้มข้นของวิตามินซี: {intensity_info} มิลลิกรัมต่อมิลลิลิตร"
             else:
