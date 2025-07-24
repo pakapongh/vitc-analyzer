@@ -49,7 +49,7 @@ def index():
                     blue_channel = roi[:, :, 2]
                     blue_intensity = np.mean(blue_channel)
 
-                         if blue_intensity <= 164.00:
+                    if blue_intensity <= 164.00:
                         intensity_info = "ไม่พบวิตามินซี (0)"
                     elif blue_intensity <= 174.00:
                         intensity_info = "น้อยที่สุด (0.156 - 0.234)"
