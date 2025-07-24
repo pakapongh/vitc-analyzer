@@ -49,13 +49,13 @@ def index():
                     blue_channel = roi[:, :, 2]
                     blue_intensity = np.mean(blue_channel)
 
-                    if blue_intensity <= 145.98:
+                    if blue_intensity <= 145.99:
                         intensity_info = "น้อยที่สุด (0.00 - 0.20)"
-                    elif 145.99 <= blue_intensity <= 147.51:
+                    elif 146.00 <= blue_intensity <= 147.52:
                         intensity_info = "น้อย (0.21 - 0.78)"
-                    elif 147.52 <= blue_intensity <= 165.20:
+                    elif 147.53 <= blue_intensity <= 165.21:
                         intensity_info = "ปานกลาง (0.79 - 3.12)"
-                    elif 165.21 <= blue_intensity <= 169.43:
+                    elif 165.22 <= blue_intensity <= 169.44:
                         intensity_info = "มาก (3.13 - 12.50)"
                     else:
                         intensity_info = "ค่อนข้างมาก (12.60 - 50.00)"
