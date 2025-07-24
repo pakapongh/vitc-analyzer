@@ -60,7 +60,7 @@ def index():
                     else:
                         intensity_info = "ค่อนข้างมาก (12.60 - 50.00)"
 
-                    result = (f"ความเข้มข้นของวิตามินซี: {intensity_info} mg/ml (B={blue_intensity:.2f})")
+                    result = (f"ความเข้มข้นของวิตามินซี: {intensity_info} mg/ml")
             else:
                 result = "ไม่สามารถโหลดไฟล์ภาพได้"
 
