@@ -49,26 +49,26 @@ def index():
                     blue_channel = roi[:, :, 2]
                     blue_intensity = np.mean(blue_channel)
 
-                if blue_intensity <= 51.00:
-                    intensity_info = "ไม่พบวิตามินซี"
-                elif blue_intensity <= 72.00:
-                    intensity_info = "น้อยที่สุด (0.156 - 0.234)"
-                elif blue_intensity <= 120.00:
-                    intensity_info = "น้อยมาก (0.319 - 0.468)"
-                elif blue_intensity <= 134.00:
-                    intensity_info = "ค่อนข้างน้อย (0.624 - 0.936)"
-                elif blue_intensity <= 140.00:
-                    intensity_info = "น้อย (1.250 - 1.875)"
-                elif blue_intensity <= 147.00:
-                    intensity_info = "ปานกลาง (2.50 - 3.75)"
-                elif blue_intensity <= 160.00:
-                    intensity_info = "มาก (5.0 - 7.5)"
-                elif blue_intensity <= 170.00:
-                    intensity_info = "ค่อนข้างมาก (10 - 15)"
-                else:
-                    intensity_info = "มากที่สุด (16 - 24)"
+                         if blue_intensity <= 164.00:
+                        intensity_info = "ไม่พบวิตามินซี (0)"
+                    elif blue_intensity <= 174.00:
+                        intensity_info = "น้อยที่สุด (0.156 - 0.234)"
+                    elif blue_intensity <= 174.50:
+                        intensity_info = "น้อยมาก (0.319 - 0.468)"
+                    elif blue_intensity <= 175.50:
+                        intensity_info = "ค่อนข้างน้อย (0.624 - 0.936)"
+                    elif blue_intensity <= 176.80:
+                        intensity_info = "น้อย (1.250 - 1.875)"
+                    elif blue_intensity <= 180.00:
+                        intensity_info = "ปานกลาง (2.50 - 3.75)"
+                    elif blue_intensity <= 185.00:
+                        intensity_info = "มาก (5.0 - 7.5)"
+                    elif blue_intensity <= 190.00:
+                        intensity_info = "ค่อนข้างมาก (10 - 15)"
+                    else:
+                        intensity_info = "มากที่สุด (16 - 24)"
 
-                    result = f"ความเข้มข้นของวิตามินซี: {intensity_info} มิลลิกรัมต่อมิลลิลิตร"
+                    result = (f"ความเข้มข้นของวิตามินซี: {intensity_info} mg/ml (B={blue_intensity:.2f})")
             else:
                 result = "ไม่สามารถโหลดไฟล์ภาพได้"
 
